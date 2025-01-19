@@ -17,4 +17,4 @@ webform:
 
 launch:
   type: binary
-  command: markitdown ${input1} -o outputs/markdown.md
+  command: markitdown inputs/${input1} -o outputs/markdown.md
