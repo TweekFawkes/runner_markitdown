@@ -1,0 +1,20 @@
+runner:
+  name: Covert File to Markdown
+  description: Converts files to Markdown. Supports PDF, PowerPoint, Word, Excel, Images (EXIF metadata and OCR), Audio (EXIF metadata and speech transcription), HTML, Text-based formats (CSV, JSON, XML), and ZIP files (iterates over contents).
+  version: 0.0.2
+
+build:
+  commands: |
+    echo "START: Building the runner"
+    apt install -y --no-install-recommends ffmpeg
+    python3 -m pip install -U -r requirements.txt
+    echo "END: Building the runner"
+
+webform:
+  - name: input1
+    prompt: File to Covert to Markdown
+    type: file
+
+launch:
+  type: binary
+  command: markitdown ${input1} -o outputs/markdown.md
