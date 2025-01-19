@@ -20,5 +20,5 @@ webform:
     type: file
 
 launch:
-  type: binary
+  type: python
   command: app.py ${file_name}
