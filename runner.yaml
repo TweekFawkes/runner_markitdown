@@ -1,7 +1,7 @@
 runner:
   name: Convert File to Markdown
   description: Convert files to Markdown. Supports PDF, PowerPoint, Word, Excel, Images (EXIF metadata and OCR), Audio (EXIF metadata and speech transcription), HTML, Text-based formats (CSV, JSON, XML), and ZIP files (iterates over contents).
-  version: 0.0.4
+  version: 0.0.5
 
 build:
   commands: |
@@ -20,4 +20,4 @@ webform:
 
 launch:
   type: binary
-  command: /usr/local/bin/markitdown inputs/${file_name} --output outputs/markdown.md
+  command: /usr/local/bin/markitdown ${file_name} --output outputs/markdown.md
