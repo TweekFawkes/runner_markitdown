@@ -15,5 +15,13 @@ markitdown path-to-file.pdf -o document.md
 
 docker run -it --entrypoint /bin/bash 476114121484.dkr.ecr.us-west-2.amazonaws.com/luckystart-runner-stage-20250119034812175806:latest 
 
+###
+
+docker run -it --entrypoint /bin/bash 476114121484.dkr.ecr.us-west-2.amazonaws.com/luckystart-runner-stage-20250119063832999257:latest 
+
+###
+
+docker run -it --entrypoint /bin/bash 476114121484.dkr.ecr.us-west-2.amazonaws.com/luckystart-runner-stage-20250119063655614993:latest
+
 
 

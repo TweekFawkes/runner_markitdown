@@ -63,7 +63,9 @@ try:
     from markitdown import MarkItDown
 
     md = MarkItDown()
-    result = md.convert(file_name)
+    print(f"[DEBUG] input_path: {input_path}")
+    result = md.convert(input_path)
+    print(f"[DEBUG] result: {result}")
     print("[+] File conversion completed")
     str_result_text_content = str(result.text_content)
     
