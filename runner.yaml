@@ -20,4 +20,4 @@ webform:
 
 launch:
   type: binary
-  command: /usr/local/bin/markitdown inputs/${file_name} -o outputs/markdown.md
+  command: /usr/local/bin/markitdown inputs/${file_name} --output outputs/markdown.md
