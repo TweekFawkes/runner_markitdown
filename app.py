@@ -11,9 +11,9 @@ import shutil
 print("[+] shutil module imported successfully")
 
 # Print all environment variables
-print("[~] All Environment Variables:")
-for key, value in os.environ.items():
-    print(f"{key}={value}")
+# print("[~] All Environment Variables:")
+# for key, value in os.environ.items():
+#     print(f"{key}={value}")
 
 print("[~] Setting up HOME cache directory...")
 root_dir = '/tmp/root'
@@ -24,9 +24,9 @@ print(f"[+] HOME set to: {os.environ['HOME']}")
 print("[+] HOME directory configured successfully")
 
 # Print all environment variables
-print("[~] All Environment Variables:")
-for key, value in os.environ.items():
-    print(f"{key}={value}")
+# print("[~] All Environment Variables:")
+# for key, value in os.environ.items():
+#    print(f"{key}={value}")
 
 try:
     print("[~] Checking command line arguments...")
@@ -34,11 +34,15 @@ try:
     print(f"[DEBUG] Arguments list: {sys.argv}")
 
     print("[~] Getting input filename...")
-    file_name = sys.argv[1]
+    # Combine all arguments after the script name into the filename
+    file_name = ' '.join(sys.argv[1:])
     print(f"[DEBUG] Input file: {file_name}")
+    
+    # Quote or escape the filename for safer path handling
+    safe_file_name = file_name.replace('"', '\\"').replace("'", "\\'")
     print("[~] ---")
     print("[~] Building file paths...")
-    input_path = os.path.join(os.getcwd(), "inputs", file_name)
+    input_path = os.path.join(os.getcwd(), "inputs", safe_file_name)
     print(f"[DEBUG] Current working directory: {os.getcwd()}")
     print(f"[DEBUG] Full input path: {input_path}")
 
