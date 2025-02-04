@@ -11,9 +11,9 @@ import shutil
 print("[+] shutil module imported successfully")
 
 # Print all environment variables
-# print("[~] All Environment Variables:")
-# for key, value in os.environ.items():
-#     print(f"{key}={value}")
+print("[~] All Environment Variables:")
+for key, value in os.environ.items():
+    print(f"{key}={value}")
 
 print("[~] Setting up HOME cache directory...")
 root_dir = '/tmp/root'
@@ -64,6 +64,12 @@ try:
     print(f"[+] Output directory ready: {os.path.dirname(output_path)}")
 
     print(f"[~] Converting {file_name} to Markdown...")
+    
+    # Print all environment variables
+    print("[~] All Environment Variables:")
+    for key, value in os.environ.items():
+        print(f"{key}={value}")
+
     from markitdown import MarkItDown
 
     md = MarkItDown()

@@ -12,6 +12,7 @@ build:
     cd /opt/markitdown/ && python3 -m pip install -e .
     ls -alF /opt/
     ls -alF /opt/markitdown/
+    ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     echo "END: Building the runner"
 
 webform:
