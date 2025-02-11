@@ -22,4 +22,4 @@ webform:
 
 launch:
   type: python
-  command: app.py ${file_name}
+  command: app.py '${file_name}'
