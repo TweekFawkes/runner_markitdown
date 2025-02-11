@@ -10,7 +10,7 @@ build:
     ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     apt install -y --no-install-recommends ffmpeg
     git clone https://github.com/microsoft/markitdown.git /opt/markitdown
-    cd /opt/markitdown/ && python3 -m pip install -e .
+    cd /opt/markitdown/ && python3 -m pip install -e packages/markitdown
     ls -alF /opt/
     ls -alF /opt/markitdown/
     echo "END: Building the runner"
